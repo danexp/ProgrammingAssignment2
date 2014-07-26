@@ -1,10 +1,12 @@
-## Put comments here that give an overall description of what your
-## functions do
 
-## Write a short comment describing this function
+##Those function does the invertion of a matrix, and stores the result in memory
+##for a next call, If so, it gets the invertion from the cache and skips the computation.
+
+##This function receives a matrix as argument and inverts the matrix, 
+##and stores it in memory
 
 makeCacheMatrix <- function(x = matrix()) {        
-        s <- NULL
+        s <- NULL 
         set <- function(y) {
                 x <<- y
                 s <<- NULL
@@ -18,7 +20,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+##The following function does the inversion of the special "matrix" created 
+##with the above function. However, it first checks to see if the invertion 
+##has already been calculated. 
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
